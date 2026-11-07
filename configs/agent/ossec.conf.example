@@ -1,0 +1,31 @@
+# Sanitized Wazuh Windows Agent Configuration Example
+
+This is a documentation example based on the lab configuration. It is not a backup of the original configuration file.
+
+```xml
+<ossec_config>
+
+  <client>
+    <server>
+      <address>WAZUH_MANAGER_IP</address>
+      <port>1514</port>
+      <protocol>tcp</protocol>
+    </server>
+  </client>
+
+  <syscheck>
+    <disabled>no</disabled>
+    <directories realtime="yes">C:\Wazuh-FIM-Test</directories>
+  </syscheck>
+
+</ossec_config>
+```
+
+## Configuration notes
+
+- `WAZUH_MANAGER_IP` is a placeholder. Replace it with the manager address only when adapting the example to another lab.
+- The agent communicates with the Wazuh Manager over TCP port `1514`.
+- File Integrity Monitoring is enabled for the dedicated test directory.
+- Real-time monitoring is enabled for the configured directory.
+
+**Security:** This example intentionally excludes credentials, certificates, private keys, and enrollment secrets.

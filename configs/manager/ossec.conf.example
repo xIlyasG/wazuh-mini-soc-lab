@@ -1,0 +1,34 @@
+# Sanitized Wazuh Manager Configuration Example
+
+This is a simplified documentation example based on the lab configuration. It is not a copy of the complete production configuration.
+
+```xml
+<ossec_config>
+
+  <!-- Enable JSON event archiving -->
+  <global>
+    <logall_json>yes</logall_json>
+    <logall>no</logall>
+  </global>
+
+  <!-- Internal Indexer connection example -->
+  <indexer>
+    <enabled>yes</enabled>
+    <hosts>
+      <host>https://127.0.0.1:9200</host>
+    </hosts>
+  </indexer>
+
+</ossec_config>
+```
+
+## Configuration notes
+
+- `logall_json` enables JSON archiving of collected events.
+- `logall` remains disabled.
+- The Indexer address uses the local server interface.
+- The archive file is stored at `/var/ossec/logs/archives/archives.json`.
+
+**Important:** This is a simplified illustrative example. Do not replace your actual `/var/ossec/etc/ossec.conf` with this file. Your real Manager configuration contains additional required sections.
+
+**Security:** Never publish credentials, private keys, certificates, or raw event archives.

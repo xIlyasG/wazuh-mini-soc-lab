@@ -1,0 +1,55 @@
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.jks
+*.keystore
+credentials*
+secrets*
+password*
+
+# Wazuh certificates and installation materials
+wazuh-install-files/
+certs/
+certificates/
+
+# Raw logs and event archives
+*.log
+*.json
+archives.json
+alerts.json
+*.evtx
+
+# Backups
+*.backup
+*.bak
+*.old
+*.orig
+*~
+
+# Temporary and operating-system files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python artifacts (if used for future analysis scripts)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Virtual machines and disk images
+*.vdi
+*.vbox
+*.vbox-prev
+*.ova
+*.ovf
+*.iso
